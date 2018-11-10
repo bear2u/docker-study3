@@ -14,9 +14,9 @@ after_success:
   - docker build -t bear2u/multi-server ./server
   - docker build -t bear2u/multi-worker ./worker
   # Log in to the docker CLI
-  # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  # # Take those images and push them to docker hub
-  # - docker push bear2u/multi-client
-  # - docker push bear2u/multi-nginx
-  # - docker push bear2u/multi-server
-  # - docker push bear2u/multi-worker
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  # Take those images and push them to docker hub
+  - docker push bear2u/multi-client
+  - docker push bear2u/multi-nginx
+  - docker push bear2u/multi-server
+  - docker push bear2u/multi-worker
